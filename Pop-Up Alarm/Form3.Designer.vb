@@ -23,14 +23,25 @@ Partial Class frmExpert
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmExpert))
+        Me.mnuMain = New System.Windows.Forms.MenuStrip()
         Me.SuspendLayout()
+        '
+        'mnuMain
+        '
+        resources.ApplyResources(Me.mnuMain, "mnuMain")
+        Me.mnuMain.Name = "mnuMain"
         '
         'frmExpert
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.mnuMain)
+        Me.MainMenuStrip = Me.mnuMain
         Me.Name = "frmExpert"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
+
+    Friend WithEvents mnuMain As MenuStrip
 End Class

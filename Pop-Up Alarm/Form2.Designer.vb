@@ -22,16 +22,30 @@ Partial Class frmClock
     '코드 편집기를 사용하여 수정하지 마십시오.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.mnuMain = New System.Windows.Forms.MenuStrip()
         Me.SuspendLayout()
+        '
+        'mnuMain
+        '
+        Me.mnuMain.Location = New System.Drawing.Point(0, 0)
+        Me.mnuMain.Name = "mnuMain"
+        Me.mnuMain.Size = New System.Drawing.Size(284, 24)
+        Me.mnuMain.TabIndex = 0
+        Me.mnuMain.Text = "MenuStrip1"
         '
         'frmClock
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 261)
+        Me.Controls.Add(Me.mnuMain)
+        Me.MainMenuStrip = Me.mnuMain
         Me.Name = "frmClock"
         Me.Text = "Form2"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
+
+    Friend WithEvents mnuMain As MenuStrip
 End Class
